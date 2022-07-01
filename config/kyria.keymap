@@ -161,7 +161,7 @@
 //                    | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
             bindings = <
     &kp TAB   &kp J &kp L &kp U    &kp A    &kp Q                                                &kp W    &kp B    &kp D     &kp G   &kp Y    &kp Z
-    &mo NAV   &kp C ALT_R CTR_I    SFT_E    &kp O                                                &kp M    SFT_N    CTR_T     RALT_S  &kp H    &kp RET
+    &mo NAV   &kp C ALT_R CTL_I    SFT_E    &kp O                                                &kp M    SFT_N    CTL_T     RALT_S  &kp H    &kp RET
     &kp LSHFT &kp V &kp X DE_UE    DE_AE    DE_OE    &mo NUMPAD &kp CAPS      ________  DE_PIPE  &kp P    &kp F    &kp COMMA &kp DOT &kp K    &kp RSHFT
                           &kp LGUI &kp LALT &kp LCTL SPACE_NUM  &kp SPACE     &kp BSPC  SPACE_NUM &kp RCTL &kp RALT &kp K_APP
             >;
