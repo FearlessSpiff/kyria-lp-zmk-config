@@ -176,7 +176,7 @@
 // | ---  | --- | --- | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- | --- | --- | --- |
 //                    | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
 			bindings = <
-	&kp ESC  &go_src  &run     ________ DE_LCBR  DE_RCBR                                         ________ DE_UE    &kp UP   DE_OE     DE_QUES  &kp DEL
+	&kp ESC  &go_src  &run     ________ DE_LCBR  DE_RCBR                                         ________ DE_MINS  &kp UP   DE_SS     DE_QUES  &kp DEL
 	________ DE_AE    DE_SS    ________ DE_LPRN  DE_RPRN                                         ________ &kp LEFT &kp DOWN &kp RIGHT DE_HASH  ________
 	________ ________ ________ ________ DE_LBRC  DE_RBRC  BT_1     BT_2        BT_3     BT_CLEAR &kp HOME &kp END  DE_QUOT  DE_DQUO   DE_EQUL   DE_TILD
 	                           ________ ________ ________ DE_LABK DE_RABK      &kp DEL  ________ DE_BSLS  DE_SLSH  &kp C_MUTE
