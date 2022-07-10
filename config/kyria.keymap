@@ -59,7 +59,7 @@
 #define UG_LILA    &rgb_ug RGB_COLOR_HSB(282, 100, 83)
 
 // home row mod left
-#define ALT_S &hm LALT S
+#define ALT_S &hm LALT tdss
 #define ALT_R &hm LALT R
 #define ALT_3 &hm LALT N3
 #define CTL_D &hm LCTRL D
@@ -77,7 +77,7 @@
 #define CTL_T &hm RCTRL T
 #define CTL_9 &hm RCTRL N9
 #define ALT_L &hm RALT L
-#define RALT_S &hm RALT S
+#define RALT_S &hm RALT tdss
 #define ALT_0 &hm RALT N0
 
 #define CTRL_DEL &hm RCTRL BSPC
@@ -131,6 +131,14 @@
                     quick-tap-ms = <0>;
                     flavor = "tap-preferred";
                     bindings = <&kp>, <&kp>;
+                };
+
+        tdss: tap_dance_ss {
+                    compatible = "zmk,behavior-tap-dance";
+                    label = "TAP_DANCE_SS";
+                    #binding-cells = <0>;
+                    tapping-term-ms = <180>;
+                    bindings = <&kp S>, <DE_SS>;
                 };
     };
 
