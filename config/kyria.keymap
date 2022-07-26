@@ -80,6 +80,11 @@
 #define RALT_S &hm RALT S
 #define ALT_0 &hm RALT N0
 
+// special modifiers for missing keys
+#define SFT_SS &hm LSHIFT MINUS
+#define SFT_MIN &hm RSHIFT SLASH
+
+
 #define CTRL_DEL &hm RCTRL BSPC
 
 / {
@@ -146,8 +151,8 @@
                     bindings = <
             &kp TAB   &kp J &kp L &kp U    &kp A    &kp Q                                                &kp W    &kp B    &kp D     &kp G   &kp Z    &kp Y
             &mo NAV   &kp C ALT_R CTL_I    SFT_E    &kp O                                                &kp M    SFT_N    CTL_T     RALT_S  &kp H    &kp RET
-            &kp LSHFT &kp V &kp X DE_UE    DE_AE    DE_OE    &mo NUMPAD &kp CAPS      ________  DE_PIPE  &kp P    &kp F    &kp COMMA &kp DOT &kp K    &kp RSHFT
-                                  &kp LGUI &kp LALT &kp LCTL SPACE_NUM  &kp SPACE     &kp BSPC  SPACE_NUM &kp RCTL &kp RALT &kp K_APP
+            SFT_SS    &kp V &kp X DE_UE    DE_AE    DE_OE    &mo NUMPAD &kp CAPS      ________  DE_PIPE  &kp P    &kp F    &kp COMMA &kp DOT &kp K    SFT_MIN
+                                  &kp LGUI &kp LALT &kp LCTL SPACE_NUM  &kp SPACE     &kp BSPC  SPACE_NUM &kp RCTL &kp RALT DE_PLUS
                     >;
 
                     sensor-bindings = <&inc_dec_kp ________ ________ &inc_dec_kp PG_UP PG_DN>;
@@ -162,7 +167,7 @@
 			bindings = <
 	&kp TAB   &kp Q &kp W &kp E    &kp R    &kp T                                                 &kp Y    &kp U    &kp I     &kp O   &kp P    &kp BSPC
 	&mo NAV   &kp A ALT_S CTL_D    SFT_F    &kp G                                                 &kp H    SFT_J    CTL_K     ALT_L   DE_PLUS  &kp RET
-	&kp LSHFT &kp Z &kp X &kp C    &kp V    &kp B    &mo NUMPAD &kp CAPS      ________  DE_PIPE   &kp N    &kp M    &kp COMMA &kp DOT DE_MINS  &kp RSHFT
+	SFT_SS    &kp Z &kp X &kp C    &kp V    &kp B    &mo NUMPAD &kp CAPS      ________  DE_PIPE   &kp N    &kp M    &kp COMMA &kp DOT DE_MINS  SFT_MIN
 	                      &kp LGUI &kp LALT &kp LCTL SPACE_NUM  &kp SPACE     &kp BSPC  SPACE_NUM CTRL_DEL &kp RALT &kp K_APP
 			>;
 
