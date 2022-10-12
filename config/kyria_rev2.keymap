@@ -206,9 +206,9 @@
 // | ---  | --- | --- | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- | --- | --- | --- |
 //                    | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
 			bindings = <
-	________ DE_AT    DE_UNDS  DE_LCBR  DE_RCBR  ________                                        DE_EXCL  DE_LABK  DE_RABK  DE_EQUL  DE_AMPS   ________
+	________ DE_AT    DE_UNDS  DE_LCBR  DE_RCBR &kp CARET                                        DE_EXCL  DE_LABK  DE_RABK  DE_EQUL  DE_AMPS   ________
 	________ DE_BSLS  DE_SLSH  DE_LPRN  DE_RPRN  DE_ASTE                                         DE_QUES  DE_LBRC  DE_RBRC  DE_MINS  DE_COL    ________
-	________ DE_HASH  DE_DOLR  DE_PIPE  DE_TILD  ________ ________ ________    ________ ________ DE_PLUS  DE_PERC  DE_DQUO  DE_QUOT  DE_SCOL   ________
+	________ DE_HASH  DE_DOLR  DE_PIPE  DE_TILD &kp GRAVE ________ ________    ________ ________ DE_PLUS  DE_PERC  DE_DQUO  DE_QUOT  DE_SCOL   ________
 	                           ________ ________ ________ ________ ________    ________ ________ ________ ________ ________
 			>;
 
