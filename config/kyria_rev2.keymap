@@ -22,7 +22,9 @@
 #define DE_LABK &kp NON_US_BACKSLASH // <
 #define DE_RABK &kp LS(NON_US_BACKSLASH) // >
 #define DE_PIPE &kp RA(NON_US_BACKSLASH)
+#define DE_AT   &kp RA(Q)
 #define DE_MINS &kp SLASH
+#define DE_UNDS &kp LS(SLASH)
 #define DE_UE   &kp LBKT
 #define DE_OE   &kp SEMI
 #define DE_AE   &kp APOS
@@ -31,6 +33,13 @@
 #define DE_HASH &kp NON_US_HASH
 #define DE_QUOT &kp LS(NON_US_HASH)
 #define DE_DQUO &kp LS(N2)
+#define DE_EXCL &kp LS(N1)
+#define DE_ASTE &kp LS(RBKT)
+#define DE_DOLR &kp LS(N4)
+#define DE_AMPS &kp LS(N6)
+#define DE_COL  &kp LS(DOT)
+#define DE_SCOL &kp LS(COMMA)
+#define DE_PERC &kp LS(N5)
 #define DE_EQUL &kp LS(N0)
 #define DE_BSLS &kp RA(MINUS)
 #define DE_SLSH &kp LS(N7)
@@ -187,8 +196,8 @@
 
 			sensor-bindings = <&inc_dec_kp ________ ________ &inc_dec_kp C_VOL_DN C_VOL_UP>;
 		}; 
-		
 
+		
 
 		neo_layer {
 // --------------------------------------------------------------------------------------------------------
@@ -197,9 +206,9 @@
 // | ---  | --- | --- | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- | --- | --- | --- |
 //                    | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
 			bindings = <
-	________ ________ ________ DE_LCBR  DE_RCBR  ________                                        ________ DE_LABK  DE_RABK  DE_EQUL  ________  ________
-	________ DE_SLSH  DE_BSLS  DE_LPRN  DE_RPRN  ________                                        DE_QUES  DE_LBRC  DE_RBRC  ________ ________  ________
-	________ DE_HASH  ________ ________ DE_TILD  ________ ________ ________    ________ ________ ________ ________ DE_DQUO  DE_QUOT  ________  ________
+	________ DE_AT    DE_UNDS  DE_LCBR  DE_RCBR  ________                                        DE_EXCL  DE_LABK  DE_RABK  DE_EQUL  DE_AMPS   ________
+	________ DE_BSLS  DE_SLSH  DE_LPRN  DE_RPRN  DE_ASTE                                         DE_QUES  DE_LBRC  DE_RBRC  DE_MINS  DE_COL    ________
+	________ DE_HASH  DE_DOLR  DE_PIPE  DE_TILD  ________ ________ ________    ________ ________ DE_PLUS  DE_PERC  DE_DQUO  DE_QUOT  DE_SCOL   ________
 	                           ________ ________ ________ ________ ________    ________ ________ ________ ________ ________
 			>;
 
