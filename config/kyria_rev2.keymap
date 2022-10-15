@@ -9,6 +9,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/rgb.h>
 
+#include <./keymap_german.h>
+
 // Layers
 #define DEFAULT 0
 #define NAV     1
@@ -17,7 +19,6 @@
 #define NUMPAD  4
 
 // DE keys
-#define DE_PLUS &kp RBKT
 #define DE_TILD &kp RA(RBKT)
 #define DE_LABK &kp NON_US_BACKSLASH // <
 #define DE_RABK &kp LS(NON_US_BACKSLASH) // >
@@ -171,10 +172,10 @@
         // | ---  | --- | --- | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- | --- | --- | --- |
         //                    | --- | --- | --- | --- | --- |     | --- | --- | --- | --- | --- |
                     bindings = <
-            &kp TAB   &kp J &kp L &kp U    &kp A    &kp Q                                                &kp W    &kp B    &kp D     &kp G   &kp Z    &kp Y
-            &mo NAV   C_NEO ALT_R CTL_I    SFT_E    &kp O                                                &kp M    SFT_N    CTL_T     RALT_S  H_NEO    &kp RET
-            SFT_SS    &kp V &kp X DE_UE    DE_AE    DE_OE    &mo NUMPAD &kp CAPS      ________  DE_PIPE  &kp P    &kp F    &kp COMMA &kp DOT &kp K    SFT_MIN
-                                  &kp LGUI &kp LALT &kp LCTL SPACE_NEO  &kp SPACE     &kp BSPC  SPACE_NUM DEL_W   &kp RALT DE_PLUS
+            &kp TAB   &kp J &kp L &kp U    &kp A    &kp Q                                                &kp W    &kp B    &kp D       &kp G   &kp Z    &kp Y
+            &mo NAV   C_NEO ALT_R CTL_I    SFT_E    &kp O                                                &kp M    SFT_N    CTL_T       RALT_S  H_NEO    &kp RET
+            SFT_SS    &kp V &kp X DE_UE    DE_AE    DE_OE    &mo NUMPAD &kp CAPS      ________  DE_PIPE  &kp P    &kp F    &kp COMMA   &kp DOT &kp K    SFT_MIN
+                                  &kp LGUI &kp LALT &kp LCTL SPACE_NEO  &kp SPACE     &kp BSPC  SPACE_NUM DEL_W   &kp RALT &kp DE_PLUS
                     >;
 
                     sensor-bindings = <&inc_dec_kp ________ ________ &inc_dec_kp PG_UP PG_DN>;
