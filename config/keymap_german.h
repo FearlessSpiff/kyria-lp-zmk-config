@@ -61,16 +61,16 @@
 #define DE_HASH NON_US_HASH // #
 // Row 4
 #define DE_LABK NON_US_BACKSLASH // <
-#define DE_Y    Z    // Y
-#define DE_X    X    // X
-#define DE_C    C    // C
-#define DE_V    V    // V
-#define DE_B    B    // B
-#define DE_N    N    // N
-#define DE_M    M    // M
-#define DE_COMM COMM // ,
-#define DE_DOT  DOT  // .
-#define DE_MINS SLSH // -
+#define DE_Y    Z     // Y
+#define DE_X    X     // X
+#define DE_C    C     // C
+#define DE_V    V     // V
+#define DE_B    B     // B
+#define DE_N    N     // N
+#define DE_M    M     // M
+#define DE_COMM COMMA // ,
+#define DE_DOT  DOT   // .
+#define DE_MINS SLASH  // -
 
 /* Shifted symbols
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
