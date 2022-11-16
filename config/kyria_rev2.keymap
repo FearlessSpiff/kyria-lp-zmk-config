@@ -23,7 +23,8 @@
 #define TODO       &trans
 #define DEL_W      &kp LC(BSPC)
 #define SPACE_SYM  &lt SYM SPACE
-#define C_NAV  &lt NAV C
+#define Z_NUM      &lt NUM Z
+#define C_NAV      &lt NAV C
 
 #define BT_1       &bt BT_SEL 0
 #define BT_2       &bt BT_SEL 1
@@ -132,13 +133,6 @@
                     bindings = <&kp>, <&kp>;
             };
 
-        td_YZ: tap_dance_YZ {
-                    compatible = "zmk,behavior-tap-dance";
-                    label = "TAP_DANCE_YZ";
-                    #binding-cells = <0>;
-                    tapping-term-ms = <200>;
-                    bindings = <&kp Y>, <&kp Z>;
-               };
         td_ALTSS: tap_dance_ALTSS {
                     compatible = "zmk,behavior-tap-dance";
                     label = "TAP_DANCE_ALTSS";
@@ -154,10 +148,10 @@
 
         default_layer {
             bindings = <
-             ________  &kp J  &kp L  &kp U        &kp A        &kp Q                                                    &kp W      &kp B     &kp D        &kp G      &td_YZ  ________
+             ________  &kp J  &kp L  &kp U        &kp A        &kp Q                                                    &kp W      &kp B     &kp D        &kp G      &kp DE_Y ________
              ________  C_NAV  ALT_R  CTL_I        SFT_E        &kp O                                                    &kp M      SFT_N     CTL_T        &td_ALTSS  &kp H   ________
-             ________  &kp V  &kp X  &kp DE_UDIA  &kp DE_ADIA  &kp DE_ODIA  ________  ________      ________  ________  &kp P      &kp F     &kp COMMA    &kp DOT    &kp K   ________
-                                     ________     ________     &kp LSHFT    &mo NUM   ________      ________  &kp BSPC  SPACE_SYM  ________  ________
+             ________  &kp V  &kp X  &kp DE_UDIA  &kp DE_ADIA  &kp DE_ODIA  ________   ________      ________  ________  &kp P      &kp F     &kp COMMA    &kp DOT    &kp K   ________
+                                     ________     ________     &kp LSHFT    Z_NUM      ________      ________  &kp BSPC  SPACE_SYM  ________  ________
              >;
 
                     sensor-bindings = <&inc_dec_kp ________ ________ &inc_dec_kp PG_UP PG_DN>;
