@@ -23,7 +23,6 @@
 #define TODO       &trans
 #define DEL_W      &kp LC(BSPC)
 #define SPACE_SYM  &lt SYM SPACE
-#define Z_NUM      &lt NUM Z
 #define C_NAV      &lt NAV C
 
 #define BT_1       &bt BT_SEL 0
@@ -125,7 +124,7 @@
         combo_enter {
             timeout-ms = <50>;
             key-positions = <22 34>;
-            bindings = <&kp ENTER>;
+            bindings = <&kp RET>;
         };
     };
 
@@ -140,13 +139,14 @@
                     bindings = <&kp>, <&kp>;
             };
 
-        td_ALTSS: tap_dance_ALTSS {
-                    compatible = "zmk,behavior-tap-dance";
-                    label = "TAP_DANCE_ALTSS";
-                    #binding-cells = <0>;
-                    tapping-term-ms = <200>;
-                    bindings = <RALT_S>, <&kp DE_SS>;
-               };
+        skq: sticky_key_quick_release {
+                compatible = "zmk,behavior-sticky-key";
+                label = "STICKY_KEY_QUICK_RELEASE";
+                #binding-cells = <1>;
+                bindings = <&kp>;
+                release-after-ms = <3000>;
+                quick-release;
+             };
     };
 
 
@@ -155,10 +155,10 @@
 
         default_layer {
             bindings = <
-             ________  &kp J  &kp L  &kp U        &kp A        &kp Q                                                    &kp W      &kp B     &kp D        &kp G      &kp DE_Y ________
-             ________  C_NAV  ALT_R  CTL_I        SFT_E        &kp O                                                    &kp M      SFT_N     CTL_T        &td_ALTSS  &kp H   ________
-             ________  &kp V  &kp X  &kp DE_UDIA  &kp DE_ADIA  &kp DE_ODIA  ________   ________      ________  ________  &kp P      &kp F     &kp COMMA    &kp DOT    &kp K   ________
-                                     ________     ________     &kp LSHFT    Z_NUM      ________      ________  &kp BSPC  SPACE_SYM  ________  ________
+             ________  &kp J  &kp L  &kp U        &kp A        &kp Q                                                     &kp W      &kp B     &kp D        &kp G      &kp DE_Z ________
+             ________  C_NAV  ALT_R  CTL_I        SFT_E        &kp O                                                     &kp M      SFT_N     CTL_T        RALT_S     &kp H    ________
+             ________  &kp V  &kp X  &kp DE_UDIA  &kp DE_ADIA  &kp DE_ODIA  ________   ________      ________  ________  &kp P      &kp F     &kp COMMA    &kp DOT    &kp K    ________
+                                     ________     ________     &kp LSHFT    &mo NUM    ________      ________  &kp BSPC  SPACE_SYM  ________  ________
              >;
 
                     sensor-bindings = <&inc_dec_kp ________ ________ &inc_dec_kp PG_UP PG_DN>;
@@ -167,10 +167,10 @@
 
         nav_layer {
             bindings = <
-            ________	________  ________  ________  ________  ________                                              &kp PG_UP  &kp HOME  &kp UP    &kp END    ________  ________
-            ________	________  ________  ________  ________  ________                                              &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  ________  ________
-            ________	________  ________  ________  ________  ________  ________  ________      ________  ________  ________   ________  ________  ________   ________  ________
-            	                            ________  ________  ________  ________  ________      ________  &kp DEL   ________  ________  ________
+            ________	________   ________  ________  ________  ________                                              &kp PG_UP  &kp HOME  &kp UP    &kp END    &kp DE_Y   ________
+            ________	________   ________  ________  ________  ________                                              &kp PG_DN  &kp LEFT  &kp DOWN  &kp RIGHT  &kp RET    ________
+            ________	&kp LSHFT  ________  ________  ________  ________  ________  ________      ________  ________  ________   ________  ________  ________   &kp DE_SS  ________
+            	                             ________  ________  ________  ________  ________      ________  &kp DEL   ________  ________  ________
    			>;
    			sensor-bindings = <&inc_dec_kp ________ ________ &inc_dec_kp PG_UP PG_DN>;
         };
@@ -194,10 +194,10 @@
 
         num_layer {
             bindings = <
-              ________  ________  ________  ________  &mo SET     ________                                                 &kp KP_DIVIDE    &kp N7    &kp N8    &kp N9  &kp KP_MINUS  ________
-              ________  &sk LGUI  &sk LALT  &sk LCTRL &sk LSHIFT  &mo FN                                                   &kp KP_MULTIPLY  &kp N4    &kp N5    &kp N6  &kp KP_PLUS   ________
-              ________  ________  ________  ________  ________    ________  ________  ________      ________  ________     &kp DE_SCLN      &kp N1    &kp N2    &kp N3  &kp N0        ________
-                                            ________  ________    ________  ________  ________      ________  &kp DE_COLN  &kp DOT          ________  ________
+              ________  ________   ________   ________    &mo SET      ________                                                 &kp KP_DIVIDE    &kp N7    &kp N8    &kp N9  &kp KP_MINUS  ________
+              ________  &skq LGUI  &skq LALT  &skq LCTRL  &skq LSHIFT  &mo FN                                                   &kp KP_MULTIPLY  &kp N4    &kp N5    &kp N6  &kp KP_PLUS   ________
+              ________  ________   ________   ________    ________     ________  ________  ________      ________  ________     &kp DE_SCLN      &kp N1    &kp N2    &kp N3  &kp N0        ________
+                                              ________    ________     ________  ________  ________      ________  &kp DE_COLN  &kp DOT          ________  ________
             >;
             sensor-bindings = <&inc_dec_kp ________ ________ &inc_dec_kp PG_UP PG_DN>;
         };
