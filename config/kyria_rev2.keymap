@@ -66,6 +66,10 @@
 #define RALT_S   &hm RALT S
 #define ALT_0    &hm RALT N0
 
+&sk {
+        release-after-ms = <3000>;
+};
+
 / {
 
     macros {
@@ -148,15 +152,6 @@
                     flavor = "tap-preferred";
                     bindings = <&kp>, <&kp>;
             };
-
-        skq: sticky_key_quick_release {
-                compatible = "zmk,behavior-sticky-key";
-                label = "STICKY_KEY_QUICK_RELEASE";
-                #binding-cells = <1>;
-                bindings = <&kp>;
-                release-after-ms = <3000>;
-                quick-release;
-             };
     };
 
 
@@ -204,10 +199,10 @@
 
         num_layer {
             bindings = <
-            ________  ________   ________   ________   &mo SET      ________                                                 &kp DE_SLSH  &kp N7  &kp N8  &kp N9  &kp DE_MINS  ________
-            ________  &skq LGUI  &skq LALT  &skq LCTRL &skq LSHIFT  ________                                                 &kp DE_ASTR  &kp N4  &kp N5  &kp N6  &kp DE_PLUS  ________
-            ________  ________   ________   ________   &mo FN       ________  ________  ________      ________  ________     &kp DE_SCLN  &kp N1  &kp N2  &kp N3  &kp N0       ________
-                                            ________   ________     ________  ________  ________      ________  &kp DE_COLN  &kp DOT          ________  ________
+            ________  ________  ________  ________   &mo SET     ________                                                 &kp DE_SLSH  &kp N7  &kp N8  &kp N9  &kp DE_MINS  ________
+            ________  &sk LGUI  &sk LALT  &sk LCTRL  &sk LSHIFT  ________                                                 &kp DE_ASTR  &kp N4  &kp N5  &kp N6  &kp DE_PLUS  ________
+            ________  ________  ________  ________   &mo FN      ________  ________  ________      ________  ________     &kp DE_SCLN  &kp N1  &kp N2  &kp N3  &kp N0       ________
+                                          ________   ________    ________  ________  ________      ________  &kp DE_COLN  &kp DOT          ________  ________
             >;
             sensor-bindings = <&inc_dec_kp ________ ________ &inc_dec_kp PG_UP PG_DN>;
         };
